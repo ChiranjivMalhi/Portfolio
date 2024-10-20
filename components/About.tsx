@@ -12,7 +12,7 @@ const About = () => {
           About <span className="text-purple-200">Me</span>
         </h2>
         <p>
-          Hi! I'm a final-year student at Thapar Institute of Engineering and Technology, pursuing computer science engineering. My interests span across 3D design, game development, and technology innovation.
+          Hi! I&apos;m a final-year student at Thapar Institute of Engineering and Technology, pursuing computer science engineering. My interests span across 3D design, game development, and technology innovation.
         </p>
         <p>
           I’m passionate about creating visually compelling environments, characters, and game assets, continuously exploring new techniques and tools to bring my artistic visions to life.
@@ -24,7 +24,7 @@ const About = () => {
           I was also a runner-up in Google Code-in 2019, which sparked my journey into development and design.
         </p>
         <p>
-          Feel free to download my resume to learn more about my projects, and let’s connect for potential collaborations!
+          Feel free to download my resume to learn more about my projects, and let&apos;s connect for potential collaborations!
         </p>
       </div>
 

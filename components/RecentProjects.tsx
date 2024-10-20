@@ -54,8 +54,10 @@ const RecentProjects = () => {
                   <FaLocationArrow className="ms-3 " color="#4C009C" />
                 </div>
                 <div className="flex flex-row gap-2 justify-end">
-                    {item.iconLists.map((i)=>(
-                      <div className="">
+                    {item.iconLists.map((i, idx)=>(
+                      <div
+                      key={idx}
+                      className="">
                         <img src={i} className="h-8"></img>
                       </div>
                     ))}

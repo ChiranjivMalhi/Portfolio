@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import { AppleCardsCarouselDemo } from "../Carousel";
 import Button from "./Botton";
 import { useState } from "react";
-import { ShootingStars } from "./shooting-stars";
-import { StarsBackground } from "./stars-background";
 
 
 export const BentoGrid = ({
