@@ -8,8 +8,13 @@
 }
 
 @font-face {
-  font-family: 'Product Sans';
-  src: url('../public/fonts/Product\ Sans\ Regular.ttf');
+  font-family: 'Campton medium';
+  src: url('../public/fonts/CamptonMedium.otf');
+}
+
+@font-face {
+  font-family: 'Product Sans Bold';
+  src: url('../public/fonts/Product\ Sans\ Bold.ttf');
 }
 
 /* @font-face {
@@ -190,8 +195,13 @@ p {
   font-family: 'Product Sans';
 }
 
+
 .campton-font{
   font-family: 'Campton Semibold';
+}
+
+.campton-font-md{
+  font-family: 'Campton medium';
 }
 
 }

@@ -11,11 +11,16 @@ import { Carousel } from "@/components/ui/apple-cards-carousel";
 import { AppleCardsCarouselDemo } from "@/components/Carousel";
 import { BoxesCore } from "@/components/ui/background-boxes";
 import About from "@/components/About";
+import { Suspense } from "react";
+import Loading from "@/components/Loading";
+
 
 export default function Home() {
   return (
     <main className="relative bg-beige-100 flex justify-center overflow-x-hidden items-center flex-col mx-auto sm:px-10 px-5">
+      
       <div className="max-w-7xl w-full">
+        
         <FloatingNav navItems={navItems}/>
         <Hero/>
         <About/>
