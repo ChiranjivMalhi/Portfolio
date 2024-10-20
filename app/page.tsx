@@ -30,10 +30,10 @@ export default function Home() {
   return (
     <main className="relative bg-beige-100 flex justify-center overflow-x-hidden items-center flex-col mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
+        <div className='hidden md:block lg:block'><FloatingNav navItems={navItems} /></div>
         <Hero />
         <About />
-        <div className="hidden lg:block"><Grid /></div>
+        <div className="hidden md:block lg:block"><Grid /></div>
         <DemoReel />
         <RecentProjects />
         <Footer />
