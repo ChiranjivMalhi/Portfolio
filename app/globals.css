@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Campton Semibold';
+  src: url('../public/fonts/CamptonSemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url('../public/fonts/Product\ Sans\ Regular.ttf');
+}
+
+/* @font-face {
+  font-family: 'General Sans SemiBold';
+  src: url('../public/fonts/GeneralSans-Semibold.otf');
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -176,7 +191,7 @@ p {
 }
 
 .campton-font{
-  font-family: 'Campton';
+  font-family: 'Campton Semibold';
 }
 
 }
