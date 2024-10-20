@@ -66,6 +66,7 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
+                
                 <span className="lg:py-4 lg:px-3 py-4 px-3 opacity-60  rounded-lg text-center bg-beige-300"></span>
               </div>
               <div className="flex flex-col gap-1 lg:gap-2">

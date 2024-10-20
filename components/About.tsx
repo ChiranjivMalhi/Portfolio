@@ -5,11 +5,11 @@ import Image from 'next/image'
 const About = () => {
   return (
     <section id="about" className="about-section">
-    <div className="flex md:flex-row flex-col-reverse justify-between items-center container mx-auto px-0">
+    <div className="flex md:flex-row flex-col-reverse justify-between items-center container mt-10 mx-auto px-0">
 
       {/* LEFT SIDE */}
       <div className="flex flex-col md:pr-[60px] w-2/3 pt-font">
-        <h2 className="font-semibold campton-font">
+        <h2 className="campton-font">
           About <span className="text-purple-200">Me</span>
         </h2>
         <p>

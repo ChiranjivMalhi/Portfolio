@@ -25,7 +25,7 @@ const Hero = () => {
                     className='text-center text-[40px] md:text-5xl lg:text-6xl campton-font'
                     words="I&apos;m Chiranjiv Singh Malhi"/>
 
-                    <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-black-400 pt-font'>
+                    <p className='text-center mb-4 text-2xl text-black-400 pt-font'>
                         A 3D designer based in India.
                     </p>
                     
