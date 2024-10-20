@@ -5,6 +5,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 import { iconsList } from "@tabler/icons-react";
+import Image from "next/image";
 
 
 
@@ -27,9 +28,11 @@ const RecentProjects = () => {
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] h-[13rem] overflow-clip rounded-2xl mb-7">
                 
-                <img
+                <Image
                   src={item.img}
                   alt="cover"
+                  width={400}
+                  height={400}
                   className="z-10 absolute rounded-2xl bottom-0  "
                 />
               </div>
@@ -58,7 +61,8 @@ const RecentProjects = () => {
                       <div
                       key={idx}
                       className="">
-                        <img src={i} className="h-8"></img>
+                        <Image width={33}
+                  height={50} src={i} className="h-8" alt=" "/>
                       </div>
                     ))}
                 </div>

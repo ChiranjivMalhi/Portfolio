@@ -37,7 +37,7 @@ export const navItems = [
       title: "Mutant Mayhem",
       des: "Third Person Shooter Game",
       img: "/Game.png",
-      iconLists: ["unreal_dark.png","Maya.png","PT_logo.svg"],
+      iconLists: ["/unreal_dark.png","/Maya.png","/PT_logo.svg"],
       link: "https://youtu.be/kx69RULTlCA",
     },
     {
@@ -45,15 +45,15 @@ export const navItems = [
       title: "Taj Mahal",
       des: "Lorem",
       img: "/taj.png",
-      iconLists: ["unreal_dark.png","Maya.png","PT_logo.svg","DS_logo.svg"],
+      iconLists: ["/unreal_dark.png","/Maya.png","/PT_logo.svg","/DS_logo.svg"],
       link: "https://www.artstation.com/artwork/qez092",
     },
     {
       id: 3,
       title: "Night Fury",
       des: "Lorem",
-      img: "fury.png",
-      iconLists: ["Zbrush_dark.svg"],
+      img: "/fury.png",
+      iconLists: ["/Zbrush_dark.svg"],
       link: "https://www.artstation.com/artwork/1xPv58",
     },
     {
@@ -61,7 +61,7 @@ export const navItems = [
       title: "Indian Railway Station",
       des: "Lorem",
       img: "/rail.png",
-      iconLists: ["unreal_dark.png","Maya.png","PT_logo.svg"],
+      iconLists: ["/unreal_dark.png","/Maya.png","/PT_logo.svg"],
       link: "https://www.artstation.com/artwork/VJQqX8",
     },
     {
@@ -77,7 +77,7 @@ export const navItems = [
       title: "Cartoon Turtle",
       des: "Lorem",
       img: "/turtle.jpg",
-      iconLists: ["Zbrush_dark.svg","PT_logo.svg","unreal_dark.png"],
+      iconLists: ["/Zbrush_dark.svg","/PT_logo.svg","/unreal_dark.png"],
       link: "https://www.artstation.com/artwork/rJYlae",
     },
     

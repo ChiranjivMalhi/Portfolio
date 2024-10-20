@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './ui/Botton'
+import Image from 'next/image'
 
 const About = () => {
   return (
@@ -33,9 +34,9 @@ const About = () => {
       <div className="flex flex-col items-end">
 
         <div className='flex flex-col w-fit items-center'>
-          <img src="/me.jpg" alt="About me" width={300} height={300} className='rounded-full' />
+          <Image src="/me.jpg" alt="About me" width={300} height={300} className='rounded-full' />
           <div className="mt-4">
-            <a href='https://drive.google.com/file/d/1ti2hvVqhd-cD3VNp4_3S313gZcZGpbzi/view?usp=sharing' target='_blank'><Button title="Resume" position="left" /></a>
+            <a href='/files/Chiranjiv_Resume.pdf' target='_blank'><Button title="Resume" position="left" /></a>
           </div>
         </div>
       </div>

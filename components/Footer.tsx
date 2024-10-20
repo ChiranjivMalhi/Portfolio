@@ -1,13 +1,16 @@
 import React from 'react'
 import { socialMedia } from "@/data";
+import Image from 'next/image';
 
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10 h-fit relative" id="contact">
     <div className="w-full absolute left-0 -bottom-0  min-h-50">
-      <img
+      <Image
         src="/footer-grid.svg"
         alt="grid"
+        width={10}
+        height={10}
         className="w-full h-[80vh] opacity-100 "
       />
     </div>

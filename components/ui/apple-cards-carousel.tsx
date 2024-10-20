@@ -176,9 +176,11 @@ export const Card = ({
         layoutId={layout ? `card-${card.title}` : undefined}
         className="rounded-3xl bg-beige-100 dark:bg-neutral-900 h-52 w-52 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-        <img
+        <Image
           src={card.src}
           alt={card.title}
+          width={200}
+          height={200}
           className="object-cover w-screen p-3 absolute z-10 inset-0 "
         />
       </motion.button>
