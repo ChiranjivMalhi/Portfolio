@@ -90,7 +90,7 @@ export const navItems = [
     },
     {
       id: 8,
-      title: "Voldemort's Wanddddddddddd",
+      title: "Voldemort's Wand",
       des: "A 3D model of Voldemort's wand with magical detail",
       img: "/vold.jpg",
       iconLists: ["/Zbrush_dark.svg","/PT_logo.svg"],
