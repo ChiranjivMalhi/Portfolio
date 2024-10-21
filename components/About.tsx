@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import Button from './ui/Botton'
 import Image from 'next/image'
 
@@ -13,16 +13,16 @@ const About = () => {
           About <span className="text-purple-200">Me</span>
         </h2>
         <p>
-          Hi! I&apos;m a final-year student at Thapar Institute of Engineering and Technology, pursuing computer science engineering. My interests span across 3D design, game development, and technology innovation.
+          Hi! I&apos;m a final-year student at <span className='text-black-400 pt-font-bold'>Thapar Institute of Engineering and Technology</span>, pursuing computer science engineering. My interests span across 3D design, frontend design, and game design & development.
         </p>
         <p>
-          I’m passionate about creating visually compelling environments, characters, and game assets, continuously exploring new techniques and tools to bring my artistic visions to life.
+          I&apos;m passionate about creating visually compelling environments, characters, and game assets, continuously exploring new techniques and tools to bring my artistic visions to life.
         </p>
         <p>
-          My work ranges from highly detailed cinematic scenes to game-ready assets, utilizing software such as Maya, Unreal Engine, Substance Painter, Designer, and ZBrush. I focus on delivering high-quality art that tells stories in unique ways.
+          I work extensively with <span className="pt-font-bold text-black-400">Maya</span>, <span className="pt-font-bold text-black-400">Unreal Engine</span>, <span className="pt-font-bold text-black-400">Substance Painter</span>, <span className="pt-font-bold text-black-400">Substance Designer</span>, and <span className="pt-font-bold text-black-400">ZBrush</span>, ensuring the highest quality in my creations.
         </p>
         <p>
-          I was also a runner-up in Google Code-in 2019, which sparked my journey into development and design.
+      I have consistently been among the top performers at my college and have received scholarships throughout all four years. I was also a runner-up in <span className="pt-font-bold text-black-400">Google Code-in 2019</span>, a milestone in my development and design journey.
         </p>
         <p>
           Feel free to download my resume to learn more about my projects, and let&apos;s connect for potential collaborations!
@@ -30,11 +30,13 @@ const About = () => {
       </div>
 
 
+
+
       {/* RIGHT SIDE */}
       <div className="flex flex-col items-end">
 
         <div className='flex flex-col w-fit items-center'>
-          <Image src="/me.jpg" alt="About me" width={300} height={300} className='rounded-full' />
+          <Image src="/me.jpg" alt="About me" width={300} height={300} className='rounded-full' loading='lazy' />
           <div className="mt-4">
             <a href='/files/Chiranjiv_Resume.pdf' target='_blank'><Button title="Resume" position="left" /></a>
           </div>

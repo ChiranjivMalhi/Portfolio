@@ -5,10 +5,9 @@ import React, {
 import {
   IconArrowNarrowLeft,
   IconArrowNarrowRight,
-  IconX,
+
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 
 
@@ -119,7 +118,7 @@ export const Card = ({
   return (
     <>
       
-      <button
+      <div
         className="rounded-3xl bg-beige-100 dark:bg-neutral-900 h-52 w-52 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <Image
@@ -128,8 +127,9 @@ export const Card = ({
           width={200}
           height={200}
           className="object-cover w-screen p-3 absolute z-10 inset-0 "
+          loading='lazy'
         />
-      </button>
+      </div>
     </>
   );
 };

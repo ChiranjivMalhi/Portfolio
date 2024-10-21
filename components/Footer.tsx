@@ -12,6 +12,7 @@ const Footer = () => {
         width={10}
         height={10}
         className="w-full h-[80vh] opacity-100 "
+        loading='lazy'
       />
     </div>
 

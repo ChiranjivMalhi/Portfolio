@@ -33,6 +33,7 @@ const RecentProjects = () => {
                   width={400}
                   height={400}
                   className="z-10 absolute rounded-2xl bottom-0  "
+                  loading='lazy'
                 />
               </div>
 
@@ -61,7 +62,7 @@ const RecentProjects = () => {
                       key={idx}
                       className="">
                         <Image width={33}
-                  height={50} src={i} className="h-8" alt=" "/>
+                  height={50} src={i} alt=" " loading='lazy'/>
                       </div>
                     ))}
                 </div>
