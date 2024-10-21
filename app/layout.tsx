@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <link rel="icon" href="/CSM.png" sizes="any" />
+      <meta name="google-site-verification" content="zDfzj3OblamJXRZYpmiOPy1s8isuh3B7kEgtuerhwY0" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
