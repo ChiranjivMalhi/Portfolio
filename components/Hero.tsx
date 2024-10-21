@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className='pb-20 pt-36'>
        
-            <div className=' items-center justify-center hidden md:flex'>
+            <div className=' items-center justify-center hidden md:flex ipad:hidden'>
                 <BoxesCore />
             </div>
 

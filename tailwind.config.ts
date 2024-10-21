@@ -26,6 +26,12 @@ const config = {
       },
     },
     extend: {
+
+      screens: {
+        'ipad': { 'min': '768px', 'max': '1367px' },
+        'portrait': { 'raw': '(orientation: portrait)' },  // For all iPads
+      },
+      
       colors: {
         black: {
           DEFAULT: "#000",

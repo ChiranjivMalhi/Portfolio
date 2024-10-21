@@ -33,7 +33,7 @@ export default function Home() {
         <div className='hidden md:block lg:block'><FloatingNav navItems={navItems} /></div>
         <Hero />
         <About />
-        <div className="hidden md:block lg:block"><Grid /></div>
+        <div className="hidden md:block portrait:hidden"><Grid /></div>
         <DemoReel />
         <RecentProjects />
         <Footer />
