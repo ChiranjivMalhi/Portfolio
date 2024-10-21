@@ -28,8 +28,8 @@ const config = {
     extend: {
 
       screens: {
-        'ipad': { 'min': '768px', 'max': '1367px' },
-        'portrait': { 'raw': '(orientation: portrait)' },  // For all iPads
+        'ipad': { 'min': '768px', 'max': '1024px' },
+        'portrait': { 'raw': '(orientation: portrait)' },  
       },
       
       colors: {
