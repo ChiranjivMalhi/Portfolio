@@ -199,6 +199,11 @@ p {
   color: #494946;
 }
 
+.boxes-container {
+  transform: scale(0.7, 0.49) translate(-1700px,-2625px) skewX(-48deg) skewY(14deg) scale(0.675);
+}
+
+
 .pt-font{
   font-family: 'Product Sans';
 }
