@@ -7,11 +7,11 @@ const Hero = () => {
   return (
     <div className='pb-20 pt-36'>
        
-            <div className='top-0 left-0 items-center justify-center hidden md:flex'>
+            <div className=' items-center justify-center hidden md:flex'>
                 <BoxesCore />
             </div>
 
-            <div className="absolute pointer-events-none inset-0 h-1/4 flex items-center justify-center bg-amber-50 [mask-image:radial-gradient(ellipse_at_bottom,transparent_60%,white)]" />
+            <div className="absolute pointer-events-none hidden md:flex inset-0 h-1/4  items-center justify-center bg-amber-50 [mask-image:radial-gradient(ellipse_at_bottom,transparent_60%,white)]" />
             
 
         <div className='flex justify-center relative my-20 z-10'>

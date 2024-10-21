@@ -8,7 +8,7 @@ const About = () => {
     <div className="flex md:flex-row flex-col-reverse justify-between items-center container mt-10 mx-auto px-0">
 
       {/* LEFT SIDE */}
-      <div className="flex flex-col md:pr-[60px] w-2/3 pt-font">
+      <div className="flex flex-col items-center mt-10 md:mt-0 md:items-start md:pr-[60px] w-2/3 pt-font">
         <h2 className="campton-font">
           About <span className="text-purple-200">Me</span>
         </h2>
