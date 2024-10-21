@@ -21,6 +21,7 @@ export default function RootLayout({
       <head>
       <link rel="icon" href="/CSM.png" sizes="any" />
       <meta name="google-site-verification" content="zDfzj3OblamJXRZYpmiOPy1s8isuh3B7kEgtuerhwY0" />
+      <meta  title="Chiranjiv Singh Malhi"/>
       </head>
       <body className={inter.className}>
         <ThemeProvider
