@@ -7,8 +7,8 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chiranjiv's Portfolio",
-  description: "Portfolio Website",
+  title: "Chiranjiv Singh Malhi",
+  description: "I'm a 3D designer based in India, creating game assets, characters, and environments with tools like Maya, Unreal Engine, and ZBrush.",
 };
 
 export default function RootLayout({
@@ -21,7 +21,6 @@ export default function RootLayout({
       <head>
       <link rel="icon" href="/CSM.png" sizes="any" />
       <meta name="google-site-verification" content="zDfzj3OblamJXRZYpmiOPy1s8isuh3B7kEgtuerhwY0" />
-      <meta  title="Chiranjiv Singh Malhi"/>
       </head>
       <body className={inter.className}>
         <ThemeProvider

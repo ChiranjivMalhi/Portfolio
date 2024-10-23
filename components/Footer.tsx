@@ -11,7 +11,7 @@ const Footer = () => {
         alt="grid"
         width={10}
         height={10}
-        className="w-full h-[80vh] opacity-100 "
+        className="w-screen "
         loading='lazy'
       />
     </div>
