@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useEffect } from 'react';
 import { FloatingNav } from "@/components/FloatingNav";
 import Hero from "@/components/Hero";
@@ -16,9 +15,45 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+
+    const trackPageLoad = async () => {
+      try {
+        let ipAddress = 'unknown'
+        try {
+          const ipResponse = await fetch('https://api.ipify.org?format=json')
+          const ipData = await ipResponse.json()
+          ipAddress = ipData.ip
+        } catch (ipError) {
+          console.error('IP tracking failed:', ipError)
+        }
+
+        // Send page load data
+        await fetch('/api/tracking', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            eventType: 'page_load',
+            timestamp: new Date().toISOString(),
+            pageUrl: window.location.href,
+            ipAddress,
+            screenWidth: window.screen.width,
+            screenHeight: window.screen.height,
+            userAgent: navigator.userAgent,
+            referrer: document.referrer
+          })
+        })
+      } catch (error) {
+        console.error('Page load tracking error:', error)
+      }
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); 
+      // Track page load after loading is complete
+      trackPageLoad();
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
