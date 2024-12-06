@@ -27,7 +27,7 @@ export default function Home() {
           console.error('IP tracking failed:', ipError)
         }
 
-        // Send page load data
+        console.log(ipAddress)
         await fetch('/api/tracking', {
           method: 'POST',
           headers: {

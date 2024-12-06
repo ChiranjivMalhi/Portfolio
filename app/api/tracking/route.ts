@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
         referer: request.headers.get("referer"),
       },
     };
+    console.log(data)
    const res =  await resend.emails.send({
         from: 'onboarding@resend.dev',
         to: 'cmalhi03@gmail.com',
