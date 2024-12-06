@@ -46,7 +46,7 @@ export const navItems = [
       des: "A third-person shooter game featuring mutant enemies.",
       img: "/mutant.png",
       iconLists: ["/unreal_dark.png","/Maya.png","/PT_logo.svg"],
-      link: "https://youtu.be/kx69RULTlCA",
+      link: "https://youtu.be/k3ZHpRlLIwQ",
     },
     {
       id: 3,
