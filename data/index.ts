@@ -94,7 +94,7 @@ export const navItems = [
       des: "A 3D model of Voldemort's wand with magical detail",
       img: "/vold.jpg",
       iconLists: ["/Zbrush_dark.svg","/PT_logo.svg"],
-      link: "https://www.artstation.com/artwork/rlWKR6",
+      link: "https://www.artstation.com/artwork/QzqEPd",
     },
     {
       id: 9,
