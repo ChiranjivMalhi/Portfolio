@@ -73,20 +73,20 @@ export const navItems = [
       link: "https://www.artstation.com/artwork/VJQqX8",
     },
     {
-      id: 7,
-      title: "Stormtrooper",
-      des: "A 3D model of a stormtrooper, reflecting the design from the Star Wars universe",
-      img: "/storm.jpg",
-      iconLists: ["/Maya.png"],
-      link: "https://www.artstation.com/artwork/ELV9bq",
-    },
-    {
       id: 6,
       title: "Cartoon Turtle",
       des: "A playful, stylized 3D character of a cartoonish turtle",
       img: "/turtle.jpg",
       iconLists: ["/Zbrush_dark.svg","/PT_logo.svg","/unreal_dark.png"],
       link: "https://www.artstation.com/artwork/rJYlae",
+    },
+    {
+      id: 7,
+      title: "Stormtrooper",
+      des: "A 3D model of a stormtrooper, reflecting the design from the Star Wars universe",
+      img: "/storm.jpg",
+      iconLists: ["/Maya.png"],
+      link: "https://www.artstation.com/artwork/ELV9bq",
     },
     {
       id: 8,
