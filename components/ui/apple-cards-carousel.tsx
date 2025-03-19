@@ -119,7 +119,7 @@ export const Card = ({
     <>
       
       <div
-        className="rounded-3xl bg-beige-100 dark:bg-neutral-900 h-52 w-52 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-2xl bg-beige-100 dark:bg-neutral-900 h-52 w-52 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <Image
           src={card.src}
