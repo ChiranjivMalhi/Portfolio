@@ -3,19 +3,38 @@ import axios from "axios";
 import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND);
 
-const CORS = {
-  "Access-Control-Allow-Origin": process.env.TRACKING_ALLOWED_ORIGIN ?? "*",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, x-tracking-key"
-};
+function buildCORSHeaders(request: NextRequest) {
+  const origin = request.headers.get('origin') || process.env.TRACKING_ALLOWED_ORIGIN || '*';
+  // If TRACKING_ALLOWED_ORIGIN is set and not '*', only allow that origin
+  const allowed = process.env.TRACKING_ALLOWED_ORIGIN && process.env.TRACKING_ALLOWED_ORIGIN !== '*'
+    ? (origin === process.env.TRACKING_ALLOWED_ORIGIN ? origin : null)
+    : origin;
 
-export async function OPTIONS() {
-  return new NextResponse(null, { status: 204, headers: CORS });
+  return {
+    'Access-Control-Allow-Origin': allowed ?? 'null',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, x-tracking-key',
+  } as Record<string, string>;
+}
+
+export async function OPTIONS(request: NextRequest) {
+  const headers = buildCORSHeaders(request);
+  return new NextResponse(null, { status: 204, headers });
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+
+    // Optional TRACKING_KEY enforcement
+    const trackingKey = process.env.TRACKING_KEY;
+    if (trackingKey) {
+      const supplied = request.headers.get('x-tracking-key');
+      if (!supplied || supplied !== trackingKey) {
+        const headers = buildCORSHeaders(request);
+        return NextResponse.json({ message: 'Unauthorized' }, { status: 401, headers });
+      }
+    }
 
     const ipAddr = request.headers.get("x-forwarded-for")?.split(",")[0].trim() || (body.ipAddress as string) || "unknown";
 
@@ -36,7 +55,7 @@ export async function POST(request: NextRequest) {
         referer: request.headers.get("referer"),
       },
     };
-    console.log(data)
+  console.log(data)
    const res =  await resend.emails.send({
         from: 'onboarding@resend.dev',
         to: 'cmalhi03@gmail.com',
@@ -58,28 +77,11 @@ export async function POST(request: NextRequest) {
           </ul>
         `
       });
-    return NextResponse.json(
-      {
-        success: true,
-        message: "Page load tracked successfully",
-      },
-      {
-        status: 200,
-        headers: CORS,
-      }
-    );
+  const headers = buildCORSHeaders(request);
+  return NextResponse.json({ success: true, message: 'Page load tracked successfully' }, { status: 200, headers });
   } catch (error) {
     console.error("Click tracking error:", error);
-
-    return NextResponse.json(
-      {
-        message: "Error tracking page load",
-        error: error instanceof Error ? error.message : "Unknown error",
-      },
-      {
-        status: 500,
-        headers: CORS,
-      }
-    );
+  const headers = buildCORSHeaders(request as NextRequest);
+  return NextResponse.json({ message: 'Error tracking page load', error: error instanceof Error ? error.message : 'Unknown error' }, { status: 500, headers });
   }
 }
