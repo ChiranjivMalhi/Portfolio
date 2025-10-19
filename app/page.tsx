@@ -10,6 +10,7 @@ import { navItems } from "@/data";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Loading from "@/components/Loading";
+import SplineComponent from '@/components/spline';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ export default function Home() {
         console.log(ipAddress)
         await fetch('/api/tracking', {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json'
           },
@@ -71,6 +73,7 @@ export default function Home() {
         <div className="hidden md:block portrait:hidden"><Grid /></div>
         <DemoReel />
         <RecentProjects />
+        
         <Footer />
       </div>
     </main>

@@ -3,11 +3,21 @@ import axios from "axios";
 import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND);
 
+const CORS = {
+  "Access-Control-Allow-Origin": process.env.TRACKING_ALLOWED_ORIGIN ?? "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, x-tracking-key"
+};
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: CORS });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const ipAddr = body.ipAddress as string;
+    const ipAddr = request.headers.get("x-forwarded-for")?.split(",")[0].trim() || (body.ipAddress as string) || "unknown";
 
     const geoLocation = await axios.get(`http://ip-api.com/json/${ipAddr}`);
 
@@ -55,6 +65,7 @@ export async function POST(request: NextRequest) {
       },
       {
         status: 200,
+        headers: CORS,
       }
     );
   } catch (error) {
@@ -67,6 +78,7 @@ export async function POST(request: NextRequest) {
       },
       {
         status: 500,
+        headers: CORS,
       }
     );
   }
