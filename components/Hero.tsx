@@ -29,7 +29,7 @@ const Hero = () => {
                     words="I&apos;m Chiranjiv Singh Malhi"/>
 
                     <p className='text-center mb-4 text-2xl text-black-400 pt-font'>
-                        A 3D designer based in India.
+                        A CS major with a love for UX and game design.
                     </p>
                     
                 </div>
