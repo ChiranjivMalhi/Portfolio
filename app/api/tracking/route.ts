@@ -11,7 +11,7 @@ function buildCORSHeaders(request: NextRequest) {
     : origin;
 
   return {
-    'Access-Control-Allow-Origin': 'https://swift-everything-703987.framer.app/',
+    'Access-Control-Allow-Origin': 'https://swift-everything-703987.framer.app',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, x-tracking-key',
   } as Record<string, string>;
