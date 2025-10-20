@@ -11,7 +11,7 @@ function buildCORSHeaders(request: NextRequest) {
     : origin;
 
   return {
-    'Access-Control-Allow-Origin': allowed ?? 'null',
+    'Access-Control-Allow-Origin': 'https://swift-everything-703987.framer.app/',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, x-tracking-key',
   } as Record<string, string>;
@@ -19,6 +19,11 @@ function buildCORSHeaders(request: NextRequest) {
 
 export async function OPTIONS(request: NextRequest) {
   const headers = buildCORSHeaders(request);
+  // If origin is explicitly disallowed, return 403 without CORS headers
+  if (!headers['Access-Control-Allow-Origin'] || headers['Access-Control-Allow-Origin'] === 'null') {
+    return new NextResponse(JSON.stringify({ message: 'Origin not allowed' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
+  }
+
   return new NextResponse(null, { status: 204, headers });
 }
 
@@ -34,6 +39,12 @@ export async function POST(request: NextRequest) {
         const headers = buildCORSHeaders(request);
         return NextResponse.json({ message: 'Unauthorized' }, { status: 401, headers });
       }
+    }
+
+    // If origin not allowed, block
+    const preflightHeaders = buildCORSHeaders(request);
+    if (!preflightHeaders['Access-Control-Allow-Origin'] || preflightHeaders['Access-Control-Allow-Origin'] === 'null') {
+      return NextResponse.json({ message: 'Origin not allowed' }, { status: 403 });
     }
 
     const ipAddr = request.headers.get("x-forwarded-for")?.split(",")[0].trim() || (body.ipAddress as string) || "unknown";
