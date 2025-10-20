@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND);
 
 function buildCORSHeaders(request: NextRequest) {
   return {
-    'Access-Control-Allow-Origin': 'https://chiranjiv.in',
+    'Access-Control-Allow-Origin': 'https://www.chiranjiv.in',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, x-tracking-key',
   } as Record<string, string>;
