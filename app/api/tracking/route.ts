@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND);
 
 function buildCORSHeaders(request: NextRequest) {
   return {
-    'Access-Control-Allow-Origin': 'https://swift-everything-703987.framer.app',
+    'Access-Control-Allow-Origin': 'https://chiranjiv.in',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, x-tracking-key',
   } as Record<string, string>;

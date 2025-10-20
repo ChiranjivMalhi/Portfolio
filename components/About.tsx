@@ -38,7 +38,7 @@ const About = () => {
         <div className='flex flex-col w-fit items-center'>
           <Image src="/me2.jpg" alt="About me" width={300} height={300} className='rounded-full' loading='lazy' />
           <div className="mt-4">
-            <a href='/files/Chiranjiv_Resume.pdf' target='_blank'><Button title="Resume" position="left" /></a>
+            <a href='/files/Resume.pdf' target='_blank'><Button title="Resume" position="left" /></a>
           </div>
         </div>
       </div>
